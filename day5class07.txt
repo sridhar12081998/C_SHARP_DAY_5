@@ -4,14 +4,8 @@ public class Program
 {
 	public static void Main()
 	{
-		Console.WriteLine("Year: ");
-		Console.WriteLine("Month: ");
-		Console.WriteLine("Week: ");
-		Console.WriteLine("Day: ");
-		Console.WriteLine("Hpur: ");
-		Console.WriteLine("Minutes: ");
-		Console.WriteLine("Seconds: ");
-		Console.WriteLine("Milliseconds: ");
+		DateTime dt = new DateTime(2021, 04, 28, 4, 30, 50);
+		Console.WriteLine(String.Format("{0:ddd, MMM, d, yyyy || HH::mm::ss}", dt));
 		Console.ReadLine();
 	}
 }

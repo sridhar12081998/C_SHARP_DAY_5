@@ -1,0 +1,41 @@
+using System;
+					
+public class Program
+{
+	struct employee
+	{
+	   public string name; 
+	    public Complete details;
+	}
+	struct Complete
+	{
+	    public int empid;
+		public int deptno;
+		public int phone;
+	}
+	public static void Main()
+	{
+		int n = 2;
+		int i;
+		employee[] emp = new employee[n];
+		Console.WriteLine("Employee Details:");
+		for(i = 0; i < n; i++)
+		{
+		Console.WriteLine("Employee Name: ");
+		 string a = Console.ReadLine();
+		  emp[i].name = a;
+			
+		  Console.WriteLine("Employee ID: ");
+		  int b = Convert.ToInt32(Console.ReadLine());
+			emp[i].details.empid = b;
+			
+			Console.WriteLine("Employee Dept Num: ");
+		    int c = Convert.ToInt32(Console.ReadLine());
+			emp[i].details.deptno = c;
+			
+			Console.WriteLine("Employee Phone Number: ");
+		    int d = Convert.ToInt32(Console.ReadLine());
+			 emp[i].details.phone = d;
+		}
+	}
+}
