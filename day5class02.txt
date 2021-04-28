@@ -1,0 +1,50 @@
+using System;
+
+namespace Sample
+{
+  public interface IVehicle
+	{
+		void DriveofType();
+	    bool Refuel(int amount);
+	}
+ public class Car: IVehicle
+	{
+		public int fuel { get; set; }
+		public Car (int _fuel)
+		{
+		fuel = _fuel;
+		}
+		public void DriveofType()
+		{
+			if(fuel > 0)
+			{
+			Console.WriteLine("The Car is Driving");
+			}else
+			{
+			Console.WriteLine("The Car is Not Driving");
+			}
+		}
+		public int amount {get; set; }
+		public bool Refuel(int amount)
+		{
+		fuel = fuel + amount;
+		Console.WriteLine("Amount of the Fuel is:" + fuel);
+		return true;
+		}
+	}
+
+public class Program
+{
+	public static void Main()
+	{
+		Car maruthi = new Car(0);
+		Console.WriteLine("Enter the amount of fuel:");
+		int fuel = Convert.ToInt32(Console.ReadLine());
+		if(maruthi.Refuel(fuel))
+		{
+		maruthi.DriveofType();
+		}
+		Console.ReadLine();
+	}
+}
+}	

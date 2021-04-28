@@ -1,0 +1,41 @@
+using System;
+	
+namespace sample
+{	
+	public class Person
+	{
+	 public string name;
+	 public Person(string _name)
+	 {
+	  name = _name;
+	 }
+      public override string ToString()
+	  {
+	   //Console.WriteLine("Name is:" + name);
+		  return "Name of the Persons are:" +name;
+	  }
+	~Person()
+	{
+		name = string.Empty;
+	}
+	}
+public class Program
+{
+	public static void Main()
+	{ 
+		Console.WriteLine("Name of the Persons are:");	
+		int n = 3;
+		Person[] man = new Person[n];
+		int i;
+		for(i = 0; i <= n; i++)
+		{
+		man[i] =  new Person (Console.ReadLine());
+		}
+		for(i = 0; i <= n; i++)
+		{
+		Console.WriteLine(man[i].ToString());
+		}
+		Console.ReadLine();
+	}
+}
+}	

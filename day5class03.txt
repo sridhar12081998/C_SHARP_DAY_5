@@ -1,0 +1,41 @@
+using System;
+
+namespace Sample
+{
+  abstract class Animal
+	{
+		public string name;
+	    public void SetName(string _name)
+		{
+		name = _name;
+		}
+		public void GetName()
+		{
+		Console.WriteLine("Name of the Dog is:" + name);
+	    return name;
+		}
+		public abstract void Eat();	
+	}
+public class Dog:Animal
+  	{  
+  		public override void Eat()
+		{
+		Console.WriteLine("The Dog is Eating");
+		}
+  	}
+	}
+
+public class Program
+{
+	public static void Main()
+	{
+		Dog labrador = new Dog();
+		labrador.SetName(Console.ReadLine());
+		Console.WriteLine("Enter the Dog Name:");
+		string name = Convert.ToString(Console.ReadLine());
+		Console.WriteLine(labrador.GetName());
+		Console.WriteLine(labrador.Eat());
+		Console.ReadLine();
+	}
+}
+}	

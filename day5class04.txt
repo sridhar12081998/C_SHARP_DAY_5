@@ -1,0 +1,45 @@
+using System;
+
+namespace Application
+{
+	public class Photobook
+	{
+	 protected int NumPages;
+	 public Photobook()
+	 {
+		 NumPages = 16;
+	 } 
+		public Photobook(int _NumPages)
+		{
+		 NumPages = _NumPages;
+		}
+	 public int GetNumPages()
+	 {
+	   return NumPages;
+	 }
+	}
+public class BigPhotobook : Photobook
+{
+	public BigPhotobook()
+	{
+	   NumPages = 64;
+	}
+}
+public class Program
+{
+	public static void Main()
+	{
+		Photobook book = new Photobook();
+
+                Photobook book1 = new Photobook(16);
+		Console.WriteLine(book1.GetNumPages());
+		Console.WriteLine("Total Num of Pages in the Photobook:");
+		Console.WriteLine(book.GetNumPages());
+
+		BigPhotobook bigbook = new BigPhotobook();
+		Console.WriteLine("Total Num of Pages in the BigPhotobook:");
+		Console.WriteLine(bigbook.GetNumPages());
+		Console.ReadLine();
+	}
+}
+}
